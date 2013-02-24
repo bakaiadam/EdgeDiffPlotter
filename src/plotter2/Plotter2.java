@@ -33,7 +33,7 @@ public class Plotter2 {
         if (args.length>0)
             data=new Data(args[0]);
         else
-            data=new Data("/munka/hobbip/java/plotolas/meas2.in.txt");
+            data=new Data("/munka/hobbip/java/plotolas/meas_33.in.txt");
         
     }
 
@@ -71,13 +71,13 @@ List<Long> values=new LinkedList<Long>();
   int i=0;
             for (Long l:values)
             {
-                System.err.println(Long.toString(l+sum_v)+" "+v);
+                System.err.println(Long.toString((l+sum_v)/10000)+" "+v);
                 x[i]=l+sum_v;
                 y[i]=v;
                 i++;
                 //v=(v+1)%4;
                 v=(v+1)%2;
-                System.err.println(Long.toString(l+1+sum_v)+" "+v);
+                System.err.println(Long.toString((l+sum_v)/10000+1 )+" "+v);
                 x[i]=l+1+sum_v;
                 y[i]=v;
                 i++;
